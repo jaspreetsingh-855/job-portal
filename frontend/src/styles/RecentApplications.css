@@ -1,0 +1,58 @@
+.applications-card {
+  flex: 2;
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.card-header button {
+  background: #5b5bd6;
+  color: white;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.applications-card table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.applications-card th {
+  text-align: left;
+  padding: 15px;
+  background: #f8f8ff;
+}
+
+.applications-card td {
+  padding: 18px 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.status {
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  color: white;
+}
+
+.status.applied {
+  background: #10b981;
+}
+
+.status.interview {
+  background: #3b82f6;
+}
+
+.status.rejected {
+  background: #ef4444;
+}

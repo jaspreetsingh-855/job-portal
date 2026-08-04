@@ -1,0 +1,43 @@
+.jobs-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 24px auto 0;
+}
+
+.jobs-container h1 {
+  text-align: left;
+  color: #5b5bd6;
+  margin-bottom: 20px;
+}
+
+.jobs-container .search-container {
+  margin-bottom: 24px;
+}
+
+.jobs-status {
+  margin-top: 30px;
+  color: #666;
+  text-align: center;
+}
+
+.jobs-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 25px;
+}
+
+.job-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.job-card h2 {
+  color: #2563eb;
+  margin-bottom: 15px;
+}
+
+.job-card p {
+  margin: 10px 0;
+}
