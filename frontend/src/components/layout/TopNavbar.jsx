@@ -2,20 +2,19 @@ import { useNavigate, useLocation, useSearchParams } from "react-router-dom";
 import SearchBar from "../jobs/SearchBar";
 import "../../styles/TopNavbar.css";
 import { FaBell, FaEnvelope } from "react-icons/fa";
-
-function getLoggedInUser() {
-  try {
-    return JSON.parse(localStorage.getItem("loggedInUser") || "null");
-  } catch {
-    return null;
-  }
-}
+import { getLoggedInUser, ROLES } from "../../utils/api";
 
 function TopNavbar() {
   const navigate = useNavigate();
   const location = useLocation();
   const [searchParams, setSearchParams] = useSearchParams();
   const user = getLoggedInUser();
+  const roleLabel =
+    user?.role === ROLES.EMPLOYER
+      ? "Recruiter"
+      : user?.role === ROLES.ADMIN
+        ? "Admin"
+        : "Job Seeker";
 
   const initialFilters = {
     search: searchParams.get("search") || "",
@@ -52,7 +51,7 @@ function TopNavbar() {
           <div className="avatar">{user?.name?.charAt(0).toUpperCase() || "U"}</div>
           <div>
             <h4>{user?.name || "User"}</h4>
-            <p>Job Seeker</p>
+            <p>{roleLabel}</p>
           </div>
         </div>
       </div>

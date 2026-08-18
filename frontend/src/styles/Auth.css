@@ -7,9 +7,20 @@
   background: white;
 }
 
+.auth-container--wide {
+  max-width: 520px;
+}
+
 .auth-container h1 {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 8px;
+}
+
+.auth-sub {
+  text-align: center;
+  color: #64748b;
+  margin-bottom: 20px !important;
+  margin-top: 0 !important;
 }
 
 .auth-container form {
@@ -18,11 +29,14 @@
   gap: 15px;
 }
 
-.auth-container input {
+.auth-container input,
+.auth-container select,
+.auth-container textarea {
   padding: 12px;
   font-size: 16px;
   border: 1px solid #ddd;
   border-radius: 6px;
+  font-family: inherit;
 }
 
 .auth-container button {
@@ -60,4 +74,3 @@
   opacity: 0.7;
   cursor: not-allowed;
 }
-

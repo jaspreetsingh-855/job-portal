@@ -1,0 +1,16 @@
+/* Shared role theme tokens — used by auth + dashboards */
+:root {
+  --seeker: #2563eb;
+  --seeker-soft: #eff6ff;
+  --seeker-mid: #dbeafe;
+  --recruiter: #059669;
+  --recruiter-soft: #ecfdf5;
+  --recruiter-mid: #a7f3d0;
+  --recruiter-dark: #064e3b;
+  --recruiter-panel: #0f3d2e;
+  --admin: #7c3aed;
+  --admin-soft: #f5f3ff;
+  --admin-mid: #ddd6fe;
+  --admin-dark: #4c1d95;
+  --admin-panel: #3b0764;
+}

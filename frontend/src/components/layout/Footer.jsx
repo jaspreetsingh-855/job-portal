@@ -1,49 +1,61 @@
+import { Link } from "react-router-dom";
+import { FaBriefcase } from "react-icons/fa";
 import "../../styles/Footer.css";
 
 function Footer() {
   return (
-    <footer className="footer">
-      <div className="footer-container">
-        <div className="footer-section">
-          <h2>Job Portal</h2>
-          <p>
-            Find your dream job with our easy-to-use platform connecting job
-            seekers with top employers.
-          </p>
-          <div className="social-icons">
-            <span>f</span>
-            <span>in</span>
-            <span>x</span>
+    <footer className="landing-footer">
+      <div className="landing-footer__inner">
+        <div className="landing-footer__brand">
+          <div className="landing-brand">
+            <span className="landing-brand__icon">
+              <FaBriefcase />
+            </span>
+            JobPortal
           </div>
+          <p>
+            Create your account and take the next step — whether you are looking
+            for a job or hiring for your company.
+          </p>
         </div>
 
-        <div className="footer-section">
+        <div className="landing-footer__col">
           <h3>For Job Seekers</h3>
           <ul>
-            <li>Browse Jobs</li>
-            <li>Career Advice</li>
-            <li>Resume Tips</li>
+            <li>
+              <Link to="/signup">Create account</Link>
+            </li>
+            <li>
+              <Link to="/login">Sign in</Link>
+            </li>
+            <li>
+              <Link to="/about">About</Link>
+            </li>
           </ul>
         </div>
 
-        <div className="footer-section">
-          <h3>For Employers</h3>
+        <div className="landing-footer__col">
+          <h3>For Recruiters</h3>
           <ul>
-            <li>Post a Job</li>
-            <li>Pricing</li>
-            <li>Recruitment Solutions</li>
+            <li>
+              <Link to="/signup">Hire talent</Link>
+            </li>
+            <li>
+              <Link to="/login">Recruiter login</Link>
+            </li>
           </ul>
         </div>
 
-        <div className="footer-section">
+        <div className="landing-footer__col">
           <h3>Contact</h3>
-          <p>Email: support@jobportal.com</p>
-          <p>Phone: +91 98765 43210</p>
+          <p>support@jobportal.com</p>
+          <p>+91 98765 43210</p>
         </div>
       </div>
 
-      <hr />
-      <p className="copyright">© 2026 Job Portal. All rights reserved.</p>
+      <p className="landing-footer__copy">
+        © 2026 JobPortal. All rights reserved.
+      </p>
     </footer>
   );
 }

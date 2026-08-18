@@ -140,7 +140,7 @@ function Jobs() {
   });
 
   return (
-    <div className="dashboard-layout">
+    <div className="dashboard-layout dashboard-layout--seeker">
       <Sidebar />
       <div className="dashboard-content">
         <TopNavbar />

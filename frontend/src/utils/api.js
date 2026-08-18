@@ -1,7 +1,31 @@
 const API_BASE = "http://localhost:5000/api";
 
+export const ROLES = {
+  JOBSEEKER: "jobseeker",
+  EMPLOYER: "employer",
+  ADMIN: "admin",
+};
+
 export function getToken() {
   return localStorage.getItem("token");
+}
+
+export function getLoggedInUser() {
+  try {
+    return JSON.parse(localStorage.getItem("loggedInUser") || "null");
+  } catch {
+    return null;
+  }
+}
+
+export function getUserRole() {
+  return getLoggedInUser()?.role || ROLES.JOBSEEKER;
+}
+
+export function homePathForRole(role) {
+  if (role === ROLES.EMPLOYER) return "/employer/dashboard";
+  if (role === ROLES.ADMIN) return "/admin/dashboard";
+  return "/dashboard";
 }
 
 export function setAuth(token, user) {
