@@ -1,0 +1,196 @@
+@import "./RoleThemes.css";
+
+.sidebar {
+  width: 260px;
+  min-height: 100vh;
+  padding: 28px 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  flex-shrink: 0;
+}
+
+.sidebar .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0 0 6px;
+  letter-spacing: -0.02em;
+}
+
+.sidebar .logo-mark {
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  font-size: 0.95rem;
+}
+
+.sidebar-role {
+  font-size: 12px;
+  margin: 0 0 8px 44px;
+  opacity: 0.75;
+}
+
+.sidebar-company {
+  font-size: 12px;
+  font-weight: 600;
+  margin: 0 0 24px 44px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  margin-bottom: 6px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background 0.2s, color 0.2s;
+}
+
+.sidebar .logout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+/* —— Job Seeker: dark navy sidebar (mockup) —— */
+.sidebar--seeker {
+  background: linear-gradient(180deg, #0b1f3a 0%, #0a1830 100%);
+  color: rgba(255, 255, 255, 0.86);
+  box-shadow: 4px 0 24px rgba(11, 31, 58, 0.25);
+}
+
+.sidebar--seeker .logo {
+  color: #fff;
+  margin-bottom: 28px;
+}
+
+.sidebar--seeker .logo-mark {
+  background: #2563eb;
+}
+
+.sidebar--seeker .sidebar-role {
+  display: none;
+}
+
+.sidebar--seeker li:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+}
+
+.sidebar--seeker li.active {
+  background: #2563eb;
+  color: #fff;
+  font-weight: 600;
+}
+
+.sidebar--seeker .logout {
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+}
+
+.sidebar--seeker .logout:hover {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+/* —— Recruiter: dark green —— */
+.sidebar--recruiter {
+  background: linear-gradient(180deg, var(--recruiter-panel), var(--recruiter-dark));
+  color: rgba(255, 255, 255, 0.88);
+  box-shadow: 4px 0 24px rgba(6, 78, 59, 0.2);
+}
+
+.sidebar--recruiter .logo {
+  color: #fff;
+}
+
+.sidebar--recruiter .logo-mark {
+  background: var(--recruiter);
+}
+
+.sidebar--recruiter .sidebar-role,
+.sidebar--recruiter .sidebar-company {
+  color: var(--recruiter-mid);
+}
+
+.sidebar--recruiter li:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+}
+
+.sidebar--recruiter li.active {
+  background: rgba(5, 150, 105, 0.35);
+  color: #fff;
+  font-weight: 600;
+}
+
+.sidebar--recruiter .logout {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.sidebar--recruiter .logout:hover {
+  background: rgba(255, 255, 255, 0.16);
+}
+
+/* —— Admin: dark purple —— */
+.sidebar--admin {
+  background: linear-gradient(180deg, var(--admin-panel), var(--admin-dark));
+  color: rgba(255, 255, 255, 0.88);
+  box-shadow: 4px 0 24px rgba(76, 29, 149, 0.25);
+}
+
+.sidebar--admin .logo {
+  color: #fff;
+}
+
+.sidebar--admin .logo-mark {
+  background: var(--admin);
+}
+
+.sidebar--admin .sidebar-role {
+  color: var(--admin-mid);
+}
+
+.sidebar--admin li:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+}
+
+.sidebar--admin li.active {
+  background: rgba(124, 58, 237, 0.4);
+  color: #fff;
+  font-weight: 600;
+}
+
+.sidebar--admin .logout {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.sidebar--admin .logout:hover {
+  background: rgba(255, 255, 255, 0.16);
+}

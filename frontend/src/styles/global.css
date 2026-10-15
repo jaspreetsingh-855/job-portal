@@ -1,0 +1,24 @@
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+body {
+  background: #f5f7fb;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.public-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}

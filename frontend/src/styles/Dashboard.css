@@ -1,0 +1,377 @@
+@import "./RoleThemes.css";
+
+.dashboard-layout {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.dashboard-layout--seeker {
+  background: #f3f5f9;
+}
+
+.dashboard-layout--recruiter {
+  background: #f3faf7;
+}
+
+.dashboard-layout--admin {
+  background: #f7f5fc;
+}
+
+.dashboard-content {
+  flex: 1;
+  padding: 22px 24px 32px;
+  min-width: 0;
+}
+
+.dash-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 22px;
+}
+
+.dash-top h1 {
+  margin: 0;
+  font-size: 1.45rem;
+  letter-spacing: -0.02em;
+}
+
+.dash-top p {
+  margin: 4px 0 0;
+  color: #64748b;
+  font-size: 0.92rem;
+}
+
+.dash-user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #fff;
+  border: 1px solid #e8eef5;
+  border-radius: 999px;
+  padding: 6px 12px 6px 6px;
+}
+
+.dash-user__avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  font-weight: 700;
+}
+
+.dash-user__avatar.seeker {
+  background: var(--seeker);
+}
+.dash-user__avatar.recruiter {
+  background: var(--recruiter);
+}
+.dash-user__avatar.admin {
+  background: var(--admin);
+}
+
+.dash-user strong {
+  display: block;
+  font-size: 0.88rem;
+}
+
+.dash-user span {
+  font-size: 0.75rem;
+  color: #64748b;
+}
+
+.role-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.role-stat {
+  border-radius: 14px;
+  padding: 18px 16px;
+  background: #fff;
+  border: 1px solid transparent;
+}
+
+.role-stat strong {
+  display: block;
+  font-size: 1.6rem;
+  letter-spacing: -0.03em;
+  margin-bottom: 4px;
+}
+
+.role-stat span {
+  color: #64748b;
+  font-size: 0.88rem;
+}
+
+.role-stat--seeker {
+  background: var(--seeker-soft);
+  border-color: var(--seeker-mid);
+  color: #1e3a8a;
+}
+
+.role-stat--recruiter {
+  background: var(--recruiter-soft);
+  border-color: var(--recruiter-mid);
+  color: #065f46;
+}
+
+.role-stat--admin {
+  background: var(--admin-soft);
+  border-color: var(--admin-mid);
+  color: #5b21b6;
+}
+
+.dash-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.dash-grid--3 {
+  grid-template-columns: 1.3fr 0.9fr 0.9fr;
+}
+
+.dash-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 18px;
+  border: 1px solid #e8eef5;
+}
+
+.dash-card h3 {
+  margin: 0 0 14px;
+  font-size: 1rem;
+}
+
+.dash-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.dash-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.dash-list li:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.dash-list strong {
+  display: block;
+  font-size: 0.92rem;
+}
+
+.dash-list em {
+  font-style: normal;
+  color: #64748b;
+  font-size: 0.8rem;
+}
+
+.progress-bar {
+  height: 10px;
+  border-radius: 999px;
+  background: #e2e8f0;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.progress-bar > span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: #22c55e;
+}
+
+.chart-ring {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  margin: 12px auto;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+}
+
+.chart-ring--seeker {
+  background: conic-gradient(var(--seeker) 0 55%, #93c5fd 55% 80%, #bfdbfe 80% 100%);
+}
+
+.chart-ring--admin {
+  background: conic-gradient(var(--admin) 0 85%, #a78bfa 85% 95%, #c4b5fd 95% 100%);
+}
+
+.chart-ring__hole {
+  width: 78px;
+  height: 78px;
+  border-radius: 50%;
+  background: #fff;
+  display: grid;
+  place-items: center;
+  font-size: 0.85rem;
+  color: #475569;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.line-chart {
+  height: 120px;
+  border-radius: 10px;
+  margin-top: 8px;
+  background:
+    linear-gradient(180deg, transparent 0%, rgba(5, 150, 105, 0.08) 100%),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 24px,
+      rgba(148, 163, 184, 0.2) 24px,
+      rgba(148, 163, 184, 0.2) 25px
+    );
+  position: relative;
+  overflow: hidden;
+}
+
+.line-chart svg {
+  width: 100%;
+  height: 100%;
+}
+
+.dash-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+
+.dash-table th,
+.dash-table td {
+  text-align: left;
+  padding: 10px 8px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.dash-table th {
+  color: #64748b;
+  font-weight: 600;
+}
+
+.badge {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.badge--green {
+  background: var(--recruiter-soft);
+  color: #047857;
+}
+
+.badge--blue {
+  background: var(--seeker-soft);
+  color: #1d4ed8;
+}
+
+.badge--purple {
+  background: var(--admin-soft);
+  color: #6d28d9;
+}
+
+.quick-actions {
+  display: grid;
+  gap: 10px;
+}
+
+.quick-actions button,
+.employer-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.btn-seeker {
+  background: var(--seeker);
+  color: #fff;
+}
+.btn-recruiter {
+  background: var(--recruiter);
+  color: #fff;
+}
+.btn-admin {
+  background: var(--admin);
+  color: #fff;
+}
+
+.btn-ghost-recruiter {
+  background: #fff;
+  color: var(--recruiter);
+  border: 1px solid var(--recruiter);
+}
+
+.employer-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.jobs-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.employer-form {
+  margin: 12px 0;
+}
+
+@media (max-width: 1100px) {
+  .role-stats,
+  .dash-grid,
+  .dash-grid--3 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 800px) {
+  .dashboard-layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    min-height: auto;
+    position: relative;
+  }
+
+  .role-stats,
+  .dash-grid,
+  .dash-grid--3 {
+    grid-template-columns: 1fr;
+  }
+}

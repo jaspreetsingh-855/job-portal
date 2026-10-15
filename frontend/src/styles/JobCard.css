@@ -1,0 +1,50 @@
+.job-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.job-card h3 {
+  color: #5b5bd6;
+  margin-bottom: 12px;
+}
+
+.job-card p {
+  margin: 8px 0;
+  color: #444;
+}
+
+.job-card-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.job-card-actions button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.job-card-actions button.secondary {
+  background: white;
+  color: #2563eb;
+  border: 1px solid #2563eb;
+}
+
+.job-card-actions button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.job-card-actions a,
+.job-card-link {
+  align-self: center;
+  color: #2563eb;
+  font-weight: 600;
+}

@@ -1,0 +1,56 @@
+.job-stats {
+  flex: 1;
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.job-stats h2 {
+  color: #333;
+  margin-bottom: 25px;
+}
+
+.stat-item {
+  margin-bottom: 25px;
+}
+
+.stat-text {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background: #ececec;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  border-radius: 20px;
+}
+
+.progress.applications {
+  background: #6366f1;
+  width: 70%;
+}
+
+.progress.views {
+  background: #22c55e;
+  width: 55%;
+}
+
+.progress.resume {
+  background: #f59e0b;
+  width: 85%;
+}
+
+.progress.interview {
+  background: #ec4899;
+  width: 40%;
+}
