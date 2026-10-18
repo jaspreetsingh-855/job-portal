@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: job-portal-api
+    runtime: node
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: npm start
