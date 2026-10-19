@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { api } from "../../utils/api";
 import "../../styles/SearchBar.css";
 
 const FALLBACK_LOCATIONS = [
@@ -36,11 +37,9 @@ function SearchBar({ onSearch, initialFilters }) {
 
     const loadLocations = async () => {
       try {
-        const response = await fetch("http://localhost:5000/api/jobs", {
+        const data = await api("/jobs", {
           signal: controller.signal,
         });
-        if (!response.ok) throw new Error(`HTTP ${response.status}`);
-        const data = await response.json();
 
         const list = Array.isArray(data) ? data : data.jobs || [];
         if (list.length > 0) {

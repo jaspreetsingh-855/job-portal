@@ -78,7 +78,7 @@ function Dashboard() {
       try {
         const [dash, jobsRes] = await Promise.all([
           api("/user-jobs/dashboard"),
-          fetch("http://localhost:5000/api/jobs").then((r) => r.json()),
+          api("/jobs"),
         ]);
 
         if (cancelled) return;

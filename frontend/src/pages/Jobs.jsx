@@ -44,11 +44,9 @@ function Jobs() {
           location: filters.location,
           jobType: filters.jobType,
         });
-        const response = await fetch(`http://localhost:5000/api/jobs?${params}`, {
+        const data = await api(`/jobs?${params}`, {
           signal: controller.signal,
         });
-        if (!response.ok) throw new Error(`HTTP ${response.status}`);
-        const data = await response.json();
         if (cancelled) return;
 
         const list = jobsFromResponse(data);
